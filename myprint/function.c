@@ -6,9 +6,10 @@
  *@element: va_list
  * Return: Always 0 (Success)
  */
-void print_char(va_list list)
+int print_char(va_list list)
 {
 	_write(va_arg(list, int));
+	return (1);
 }
 
 /**
@@ -16,7 +17,7 @@ void print_char(va_list list)
  *@element: va_list
  * Return: Always 0 (Success)
  */
-void print_string(va_list list)
+int print_string(va_list list)
 {
 	char *s = va_arg(list, char*);
 	int i;
@@ -27,6 +28,7 @@ void print_string(va_list list)
 	}
 	for (i = 0; s[i] != '\0'; i++)
 		_write(s[i]);
+	return (i);
 }
 
 /**
@@ -34,9 +36,10 @@ void print_string(va_list list)
  *@element: va_list
  * Return: Always 0 (Success)
  */
-void print_percent(void)
+int print_percent(void)
 {
 	_write('%');
+	return (1);
 }
 
 /**
@@ -44,7 +47,8 @@ void print_percent(void)
  *@element: va_list
  * Return: Always 0 (Success)
  */
-void print_integer(va_list list)
+int print_integer(va_list list)
 {
 	_write(va_arg(list, int));
+	return (1);
 }
