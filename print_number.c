@@ -45,3 +45,21 @@ int print_number(va_list my_list)
 	}
 	return (l);
 }
+int print_unsignedNumber(unsigned int n)
+{
+	int l = 0, digit = 10000;
+	int temp = n;
+
+	while (n > 0)
+	{
+		digit = digit * 10;
+		n = n / 100;
+	}
+	n = digit;
+	while (n > 0)
+	{
+		l += _write('0' + ((temp / n) % 10));
+		n = n / 10;
+	}
+	return (l);
+}

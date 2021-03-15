@@ -62,7 +62,10 @@ int print_unsignedint(va_list list)
 {
 	unsigned int num;
 
-	num = (va_arg(list, int));
-	_write(num);
-	return (num);
+	num = va_arg(list, unsigned int);
+	if (num == 0)
+		return (print_unsignedNumber(num));
+	if (num < 1)
+		return (-1);
+	return (print_unsignedNumber(num));
 }

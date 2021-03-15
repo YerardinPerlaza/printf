@@ -24,10 +24,11 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
 int print_integer(va_list list);
-int print_unsignedint(va_list list);
+int print_unsignedint(va_list my_list);
 int myaux(const char *format, prn_t _print[], va_list my_list);
+
 int print_number(va_list my_list);
-int print_unsignednumber(va_list my_list);
+int print_unsignedNumber(unsigned int n);
 
 
 #endif
