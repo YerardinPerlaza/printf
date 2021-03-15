@@ -1,4 +1,5 @@
 #include "holberton.h"
+<<<<<<< HEAD
 #include <stdio.h>
 
 /**
@@ -8,6 +9,9 @@
  *
  * Return: Always 0.
  */
+=======
+
+>>>>>>> 1289ac6e7d9e27652a0e85cfec27d8115b63cd8d
 int print_number(va_list my_list)
 {
 	int n, digit;

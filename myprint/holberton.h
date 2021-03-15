@@ -24,9 +24,13 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_percent(void);
 int print_integer(va_list list);
+<<<<<<< HEAD
 int print_unsignedint(va_list list);
 int myaux(const char *format, prn_t _print[], va_list my_list);
 int print_number(va_list my_list);
 int print_unsignednumber(va_list my_list);
+=======
+int print_number(va_list my_list);
+>>>>>>> 1289ac6e7d9e27652a0e85cfec27d8115b63cd8d
 
 #endif

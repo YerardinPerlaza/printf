@@ -49,10 +49,17 @@ int print_percent(void)
 int print_integer(va_list list)
 {
 	int num;
+<<<<<<< HEAD
 
 	num = print_number(list);
 	return (num);
 }
+=======
+	num = print_number(list);
+	return (num);
+}
+
+>>>>>>> 1289ac6e7d9e27652a0e85cfec27d8115b63cd8d
 int print_unsignedint(va_list list)
 {
 	unsigned int num;
