@@ -45,6 +45,12 @@ int print_number(va_list my_list)
 	}
 	return (l);
 }
+/**
+ * print_unsignedNumber - Entry point
+ *@n: unsigned int
+ * Return: Always 0 (Success)
+ */
+
 int print_unsignedNumber(unsigned int n)
 {
 	unsigned long digit = 10;

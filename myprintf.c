@@ -17,6 +17,10 @@ int _printf(const char *format, ...)
 		{"d", print_integer},
 		{"i", print_integer},
 		{"u", print_unsignedint},
+		{"b", print_binary},
+		{"o", print_octal},
+/*		{"x", print_hex_low},
+		{"X", print_hex_up},*/
 		{'\0', '\0'}
 	};
 	va_list my_list;

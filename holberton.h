@@ -29,6 +29,10 @@ int myaux(const char *format, prn_t _print[], va_list my_list);
 
 int print_number(va_list my_list);
 int print_unsignedNumber(unsigned int n);
+int c_binary(unsigned int n);
+int print_binary(va_list list);
+int c_octal(unsigned int n);
+int print_octal(va_list list);
 
 
 #endif
