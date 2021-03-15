@@ -23,6 +23,6 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_percent(void);
 int print_integer(va_list list);
-
+int print_number(va_list my_list);
 
 #endif
