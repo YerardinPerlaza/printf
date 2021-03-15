@@ -1,8 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
+ * myaux - Entry point
+ *@format: char string
+ *@_print: strcuture
+ *@my_list: list
  * Return: Always 0 (Success)
  */
 int myaux(const char *format, prn_t _print[], va_list my_list)
@@ -16,7 +18,6 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 		buffer[i] = format[i];
 		if (format[i] == '%')
 		{
-
 			for (j = 0; _print[j].prn != '\0'; j++)
 			{
 				if (_print[j].prn[0] == format[i + 1])

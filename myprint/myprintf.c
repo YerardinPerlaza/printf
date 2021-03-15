@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_all - check the code for Holberton School students.
+ * _printf - check the code for Holberton School students.
  *@format: list of types of arguments
  * Return: Always 0.
  */
@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	prn_t _print[] = {
 		{"c", print_char},
 		{"s", print_string},
-		/* {'%', print_percent},*/
+		{"%", print_percent},
 		{"d", print_integer},
 		{"i", print_integer},
 		{"u", print_unsignedint},

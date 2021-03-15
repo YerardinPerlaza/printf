@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * struct op - Struct op
+ * struct prn - structure
  *
- * @op: The operator
+ * @prn: The operator
  * @f: The function associated
  */
 
@@ -22,11 +22,12 @@ int _printf(const char *format, ...);
 int _write(char c);
 int print_char(va_list list);
 int print_string(va_list list);
-int print_percent(void);
+int print_percent(__attribute__((unused))va_list list);
 int print_integer(va_list list);
 int print_unsignedint(va_list list);
 int myaux(const char *format, prn_t _print[], va_list my_list);
 int print_number(va_list my_list);
 int print_unsignednumber(va_list my_list);
+
 
 #endif

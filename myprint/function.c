@@ -2,7 +2,7 @@
 
 /**
  * print_char - Entry point
- *@element: va_list
+ *@list: va_list
  * Return: Always 0 (Success)
  */
 int print_char(va_list list)
@@ -13,7 +13,7 @@ int print_char(va_list list)
 
 /**
  * print_string - Entry point
- *@element: va_list
+ *@list: va_list
  * Return: Always 0 (Success)
  */
 int print_string(va_list list)
@@ -32,10 +32,10 @@ int print_string(va_list list)
 
 /**
  * print_percent - Entry point
- *@element: va_list
+ *@list: va_list
  * Return: Always 0 (Success)
  */
-int print_percent(void)
+int print_percent(__attribute__((unused))va_list list)
 {
 	_write('%');
 	return (1);
@@ -43,19 +43,25 @@ int print_percent(void)
 
 /**
  * print_integer - Entry point
- *@element: va_list
+ *@list: va_list
  * Return: Always 0 (Success)
  */
 int print_integer(va_list list)
 {
-	int num;
+	int num_l;
 
-	num = print_number(list);
-	return (num);
+	num_l = print_number(list);
+	return (num_l);
 }
+/**
+ * print_unsignedint - Entry point
+ *@list: va_list
+ * Return: Always 0 (Success)
+ */
 int print_unsignedint(va_list list)
 {
 	unsigned int num;
+
 	num = (va_arg(list, int));
 	_write(num);
 	return (num);
