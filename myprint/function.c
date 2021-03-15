@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * print_char - Entry point
@@ -49,6 +48,15 @@ int print_percent(void)
  */
 int print_integer(va_list list)
 {
-	_write(va_arg(list, int));
-	return (1);
+	int num;
+
+	num = print_number(list);
+	return (num);
+}
+int print_unsignedint(va_list list)
+{
+	unsigned int num;
+	num = (va_arg(list, int));
+	_write(num);
+	return (num);
 }
