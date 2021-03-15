@@ -47,19 +47,28 @@ int print_number(va_list my_list)
 }
 int print_unsignedNumber(unsigned int n)
 {
-	int l = 0, digit = 10000;
-	int temp = n;
+	unsigned long digit = 10;
+	unsigned long l = 0;
+	unsigned long temp;
 
-	while (n > 0)
+	temp = n;
+
+	if (n == 0)
+		l += _write('0');
+	else
 	{
-		digit = digit * 10;
-		n = n / 100;
-	}
-	n = digit;
-	while (n > 0)
-	{
-		l += _write('0' + ((temp / n) % 10));
-		n = n / 10;
+		while (n > 0)
+		{
+			digit = digit * 100;
+			n = n / 1000;
+		}
+		n = digit;
+		while (n > 0)
+		{
+			if (!(n == digit && ((temp / n) % 10) == 0))
+				l += _write('0' + ((temp / n) % 10));
+			n = n / 10;
+		}
 	}
 	return (l);
 }
