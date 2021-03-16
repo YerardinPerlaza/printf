@@ -1,8 +1,8 @@
 #include "holberton.h"
 #include <limits.h>
 /**
- * main - Entry point
- *
+ * c_octal - Entry point
+ *@n: unsigned int
  * Return: Always 0 (Success)
  */
 int c_octal(unsigned int n)
@@ -24,8 +24,8 @@ int c_octal(unsigned int n)
 	return (l);
 }
 /**
- * main - Entry point
- *
+ * print_octal - Entry point
+ *@list: va_list
  * Return: Always 0 (Success)
  */
 int print_octal(va_list list)
