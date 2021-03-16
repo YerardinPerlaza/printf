@@ -7,15 +7,6 @@
  *@my_list: list
  * Return: Always 0 (Success)
  */
-int myaux(const char *format, prn_t _print[], va_list my_list)
-{
-	int i, j, printed_c;
-	char buffer[1024] = {0};
-
-	printed_c = 0;
-	auxaux(i, j, printed_c, buffer);
-	return (printed_c);
-}
 
 int moveonthearray(int i, int j, char *format)
 {
@@ -66,4 +57,13 @@ int auxaux(int i, int j, int printed_c, char *buffer)
 			printed_c++;
 		}
 	}
+}
+int myaux(const char *format, prn_t _print[], va_list my_list)
+{
+	int i, j, printed_c;
+	char buffer[1024] = {0};
+
+	printed_c = 0;
+	auxaux(i, j, printed_c, buffer);
+	return (printed_c);
 }
