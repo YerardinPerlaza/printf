@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <limits.h>
 /**
  * main - Entry point
  *
@@ -7,9 +7,10 @@
  */
 int c_octal(unsigned int n)
 {
-	int octal[100] = {0};
+	int *octal;
 	int i = 0, j, l = 0, oc;
 
+	octal = malloc(sizeof(unsigned int) * (UINT_MAX + 1024));
 	while (n > 0)
 	{
 		octal[i] = n % 8;
@@ -21,8 +22,14 @@ int c_octal(unsigned int n)
 		oc = octal[j];
 		l += _write(oc + '0');
 	}
+	free(octal);
 	return (l);
 }
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int print_octal(va_list list)
 {
 	int num;

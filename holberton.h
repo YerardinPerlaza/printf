@@ -33,6 +33,8 @@ int c_binary(unsigned int n);
 int print_binary(va_list list);
 int c_octal(unsigned int n);
 int print_octal(va_list list);
+int c_hex(unsigned int n);
+int print_hex_low(va_list list);
 
 
 #endif
