@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * c_binary - Entry point
+ * c_hex - Entry point
  *@n: unsigned int
  * Return: Always 0 (Success)
  */
@@ -35,7 +35,7 @@ int c_hex(unsigned int n)
 	return (l);
 }
 /**
- * print_binary - Entry point
+ * print_hex_low - Entry point
  *@list: va_list
  * Return: Always 0 (Success)
  */

@@ -35,7 +35,7 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 				{
 					_write(format[i]);
 					_write(format[i + 1]);
-					printed_c ++;
+					printed_c++;
 				}
 				else
 					return (-1);
@@ -45,7 +45,6 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 				_write(format[i]);
 				_write(format[i + 1]);
 				printed_c++;
-
 			}
 			else
 				printed_c++;

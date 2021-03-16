@@ -8,7 +8,7 @@
 /**
  * struct prn - structure
  *
- * @prn: The operator
+ * @c: The operator
  * @f: The function associated
  */
 
