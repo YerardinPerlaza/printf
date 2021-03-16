@@ -18,9 +18,9 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 		buffer[i] = format[i];
 		if (format[i] == '%')
 		{
-			for (j = 0; _print[j].prn != '\0'; j++)
+			for (j = 0; _print[j].c != '\0'; j++)
 			{
-				if (_print[j].prn[0] == format[i + 1])
+				if (format[i + 1] == _print[j].c)
 				{
 					buffer[i] = _print[j].f(my_list);
 					if (buffer[i] == -1)
@@ -29,7 +29,7 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 					break;
 				}
 			}
-			if (_print[j].prn == '\0' && format[i + 1] != ' ')
+			if (_print[j].c == '\0' && format[i + 1] != ' ')
 			{
 				if (format[i + 1] != '\0')
 				{
