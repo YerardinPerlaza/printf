@@ -17,6 +17,14 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 	return (printed_c);
 }
 
+int moveonthearray(int i, int j, char *format)
+{
+	_write(format[i]);
+	_write(format[i + 1]);
+	printed_c ++;
+	return (printed_c);
+}
+
 int auxaux(int i, int j, int printed_c, char *buffer)
 {
 	for (i = 0; format[i] != '\0'; i++)
@@ -39,19 +47,14 @@ int auxaux(int i, int j, int printed_c, char *buffer)
 			{
 				if (format[i + 1] != '\0')
 				{
-					_write(format[i]);
-					_write(format[i + 1]);
-					printed_c ++;
+					moveonthearray(i, j, format);
 				}
 				else
 					return (-1);
 			}
 			else if (_print[j].c == '\0' && format[i + 1] == ' ')
 			{
-				_write(format[i]);
-				_write(format[i + 1]);
-				printed_c++;
-
+				moveonthearray(i, j, format);
 			}
 			else
 				printed_c++;
