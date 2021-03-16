@@ -7,7 +7,7 @@
  */
 int c_octal(unsigned int n)
 {
-	unsigned int octal[100] = {0};
+	int octal[100] = {0};
 	int i = 0, j, l = 0, oc;
 
 	while (n > 0)
