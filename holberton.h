@@ -14,7 +14,7 @@
 
 typedef struct prn
 {
-	char c;
+	char *c;
 	int (*f)(va_list);
 } prn_t;
 

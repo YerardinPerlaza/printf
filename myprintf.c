@@ -11,15 +11,15 @@ int _printf(const char *format, ...)
 	int printed_c;
 
 	prn_t _print[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
-		{'d', print_integer},
-		{'i', print_integer},
-		{'u', print_unsignedint},
-		{'b', print_binary},
-		{'o', print_octal},
-		{'x', print_hex_low},
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
+		{"d", print_integer},
+		{"i", print_integer},
+		{"u", print_unsignedint},
+		{"b", print_binary},
+		{"o", print_octal},
+		{"x", print_hex_low},
        /*       {"X", print_hex_up},*/
 		{'\0', '\0'}
 	};

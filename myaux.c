@@ -20,7 +20,7 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 		{
 			for (j = 0; _print[j].c != '\0'; j++)
 			{
-				if (format[i + 1] == _print[j].c)
+				if (format[i + 1] == *(_print[j]).c)
 				{
 					buffer[i] = _print[j].f(my_list);
 					if (buffer[i] == -1)
