@@ -23,7 +23,7 @@ int print_string(va_list list)
 
 	if (s == NULL)
 	{
-		s = "(nil)";
+		s = "(null)";
 	}
 	for (i = 0; s[i] != '\0'; i++)
 		_write(s[i]);

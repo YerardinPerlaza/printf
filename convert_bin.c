@@ -23,7 +23,6 @@ int c_binary(unsigned int n)
 	}
 
 	return (l);
-
 }
 /**
  * print_binary - Entry point
