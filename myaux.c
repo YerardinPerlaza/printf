@@ -14,7 +14,9 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 	printed_c = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
+		else if (format[i] == '%')
 		{
 			for (j = 0; _print[j].c != '\0'; j++)
 			{

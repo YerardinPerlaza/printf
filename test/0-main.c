@@ -14,9 +14,12 @@ int main(void)
 	/* unsigned int ui; */
 	/* void *addr; */
 
-	/*len = printf(NULL);
-	len2 = _printf(NULL);
-	printf("Len 1 = %d, Len 2 = %d\n", len, len2);*/
+	len = printf("HOLAMUNDO%");
+	printf("\n");
+	len2 = _printf("HOLAMUNDO%");
+	printf("\n");
+
+	printf("Len 1 = %d, Len 2 = %d\n", len, len2);
 
 	/* /\* Sentence - CHECK *\/ */
 	/* len =  _printf("Let's try to printf a simple sentence.\n"); */
@@ -105,10 +108,10 @@ int main(void)
 	/* printf("Len 1 = %d, Len 2 = %d\n\n", len, len2); */
 
 	/* /\* Check *\/ */
-	printf("Case 3: wrong format.\n"); 
+/*	printf("Case 3: wrong format.\n"); 
 	len = printf("some %y format\n", "something"); 
 	len2 = _printf("some %y format\n", "something"); 
-	printf("Len 1 = %d, Len 2 = %d\n\n", len, len2); 
+	printf("Len 1 = %d, Len 2 = %d\n\n", len, len2); */
 
 	/* /\* Check *\/ */
 	/* printf("Case 4: more arguments than formats.\n"); */
