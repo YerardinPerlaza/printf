@@ -29,24 +29,14 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 					break;
 				}
 			}
-			if (_print[j].c == '\0' && format[i + 1] != ' ')
+			if ((_print[j].c == '\0' && format[i + 1] != ' ') ||
+(_print[j].c == '\0' && format[i + 1] == ' '))
 			{
 				if (format[i + 1] != '\0')
 				{
 					_write(format[i]);
 					_write(format[i + 1]);
-					printed_c++;
-				}
-				else
-					return (-1);
-			}
-			else if (_print[j].c == '\0' && format[i + 1] == ' ')
-			{
-				if (format[i + 1] != '\0')
-				{
-					_write(format[i]);
-					_write(format[i + 1]);
-					printed_c++;
+					printed_c = printed_c + 2;
 				}
 			}
 			i++; /*updating to skip the format*/
