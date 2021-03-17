@@ -24,11 +24,9 @@ int print_char(va_list list);
 int print_string(va_list list);
 int print_percent(__attribute__((unused))va_list list);
 int print_integer(va_list list);
-int print_unsignedint(va_list my_list);
+int print_number(int n);
 int myaux(const char *format, prn_t _print[], va_list my_list);
 
-int print_number(va_list my_list);
-int print_unsignedNumber(unsigned int n);
 int c_binary(unsigned int n);
 int print_binary(va_list list);
 int c_octal(unsigned int n);

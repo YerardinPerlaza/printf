@@ -41,32 +41,18 @@ int print_percent(__attribute__((unused))va_list list)
 	_write('%');
 	return (1);
 }
-
 /**
- * print_integer - Entry point
- *@list: va_list
- * Return: Always 0 (Success)
+ * print_integer - prints numbers. Integers and decimals!
+ * @list: list
+ * Return: a number
  */
+
 int print_integer(va_list list)
 {
-	int num_l;
+	int num;
+	int count;
 
-	num_l = print_number(list);
-	return (num_l);
-}
-/**
- * print_unsignedint - Entry point
- *@list: va_list
- * Return: Always 0 (Success)
- */
-int print_unsignedint(va_list list)
-{
-	unsigned int num;
-
-	num = va_arg(list, unsigned int);
-	if (num == 0)
-		return (print_unsignedNumber(num));
-	if (num < 1)
-		return (-1);
-	return (print_unsignedNumber(num));
+	num = va_arg(list, int);
+	count = print_number(num);
+	return (count);
 }

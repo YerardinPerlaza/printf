@@ -8,73 +8,39 @@
  *
  * Return: Always 0.
  */
-int print_number(va_list my_list)
+int print_number(int n)
 {
-	int n, digit = 10;
-	int l = 0;
-	int temp;
+	int count = 0;
+	unsigned int num;
+	unsigned int dig;
+	unsigned int i;
+	unsigned int long_num;
 
-	n = va_arg(my_list, int);
-	temp = n;
-
+	long_num = n;
 	if (n < 0)
-		temp = (-n);
-
-	if (n == 0)
-		l += _write('0');
-	else
 	{
-		if (n < 0)
-		{
-			n = (-n);
-			l += _write('-');
-			n = n * 100;
-		}
-		while (n > 0)
-		{
-			digit = digit * 10;
-			n = n / 100;
-		}
-		n = digit;
-		while (n > 0)
-		{
-			if (!(n == digit && ((temp / n) % 10) == 0))
-				l += _write('0' + ((temp / n) % 10));
-			n = n / 10;
-		}
+		count++;
+		long_num = long_num * -1;
+		_write('-');
 	}
-	return (l);
-}
-/**
- * print_unsignedNumber - Entry point
- *@n: unsigned int
- * Return: Always 0 (Success)
- */
-
-int print_unsignedNumber(unsigned int n)
-{
-	unsigned long digit = 10;
-	unsigned long l = 0;
-	unsigned long temp;
-
-	temp = n;
-
-	if (n == 0)
-		l += _write('0');
-	else
+	if (long_num == 0)
 	{
-		while (n > 0)
-		{
-			digit = digit * 100;
-			n = n / 1000;
-		}
-		n = digit;
-		while (n > 0)
-		{
-			if (!(n == digit && ((temp / n) % 10) == 0))
-				l += _write('0' + ((temp / n) % 10));
-			n = n / 10;
-		}
+		count++;
+		_write('0');
+		return (count);
 	}
-	return (l);
+	i = 1;
+	while (((long_num / i) > 9))
+	{
+		i = i * 10;
+	}
+	while (i > 0)
+	{
+		num = long_num / i;
+		dig = num % 10;
+		count++;
+		_write(dig + '0');
+		i = (i / 10);
+	}
+	return (count);
 }
