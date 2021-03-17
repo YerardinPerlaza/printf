@@ -50,9 +50,9 @@ int print_percent(__attribute__((unused))va_list list)
 int print_integer(va_list list)
 {
 	int num;
-	int count;
+	int l;
 
 	num = va_arg(list, int);
-	count = print_number(num);
-	return (count);
+	l = print_number(num);
+	return (l);
 }
