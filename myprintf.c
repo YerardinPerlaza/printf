@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	};
 	va_list my_list;
 
-	if (format == NULL)
+	if (!format || format == NULL)
 		return (-1);
 
 	va_start(my_list, format);
