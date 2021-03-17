@@ -4,7 +4,7 @@
 /**
  * print_number - check the code for Holberton School students.
  *
- *@my_list: list
+ *@n: int
  *
  * Return: Always 0.
  */
