@@ -24,6 +24,7 @@ int print_string(va_list list)
 	if (s == NULL)
 	{
 		s = "(null)";
+		i = 6;
 	}
 	for (i = 0; s[i] != '\0'; i++)
 		_write(s[i]);
