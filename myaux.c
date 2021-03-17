@@ -9,23 +9,21 @@
  */
 int myaux(const char *format, prn_t _print[], va_list my_list)
 {
-	int i, j, printed_c;
-	char buffer[1024] = {0};
+	int i, j, buf, printed_c;
 
 	printed_c = 0;
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		buffer[i] = format[i];
 		if (format[i] == '%')
 		{
 			for (j = 0; _print[j].c != '\0'; j++)
 			{
 				if (format[i + 1] == *(_print[j]).c)
 				{
-					buffer[i] = _print[j].f(my_list);
-					if (buffer[i] == -1)
+					buf = _print[j].f(my_list);
+					if (buf == -1)
 						return (-1);
-					printed_c++;
+					printed_c += buf;
 					break;
 				}
 			}
@@ -43,7 +41,7 @@ int myaux(const char *format, prn_t _print[], va_list my_list)
 		}
 		else
 		{
-			_write(buffer[i]);
+			_write(format[i]);
 			printed_c++;
 		}
 	}
